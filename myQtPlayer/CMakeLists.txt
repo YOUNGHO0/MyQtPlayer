@@ -20,13 +20,19 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Multimedia
+        MultimediaWidgets
         REQUIRED)
 
-add_executable(myQtPlayer main.cpp)
+add_executable(myQtPlayer main.cpp
+        VideoPlayer.h
+        VideoPlayer.cpp)
 target_link_libraries(myQtPlayer
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Multimedia
+        Qt::MultimediaWidgets
         avcodec
         avformat
         avutil
