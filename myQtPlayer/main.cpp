@@ -14,11 +14,16 @@ extern "C"{
 
 #include <QApplication>
 #include <QPushButton>
+#include "VideoPlayer.h"
+
+
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
-    return QApplication::exec();
+    QApplication app(argc, argv);
+
+    VideoPlayer player;
+    player.resize(800, 600);
+    player.show();
+
+    return app.exec();
 }
